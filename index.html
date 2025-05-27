@@ -249,7 +249,7 @@
     
     <div class="container">
         <div class="logo">
-            <img src="images/WhatsApp_Image_2024-09-09_at_19.41.41-removebg-preview.png" alt="Thampadda Mahavidyalaya Logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'color:#333; font-size:18px; font-weight:bold;\'>TM</span>'">
+            <img src="logo.png" alt="Thampadda Mahavidyalaya Logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'color:#333; font-size:18px; font-weight:bold;\'>TM</span>'">
         </div>
         
         <h1>Thampadda Mahavidyalaya</h1>
@@ -287,7 +287,9 @@
             const distance = launchDate.getTime() - now;
 
             if (distance < 0) {
-                document.getElementById('countdown').innerHTML = '<div class="countdown-item live" style="cursor: pointer;" onclick="window.open(\'https://thampaddaimahavidyalaya.edu.lk\', \'_blank\')"><span class="countdown-number">🎉</span><span class="countdown-label">We\'re Live!<br><small style="opacity: 0.8;">Click to Visit</small></span></div>';
+                document.getElementById('countdown').innerHTML = '<div class="countdown-item live"><span class="countdown-number">🎉</span><span class="countdown-label">Redirecting...<br><small style="opacity: 0.8;">Please wait</small></span></div>';
+                // Auto redirect to the website after countdown completes
+                window.location.href = 'https://thampaddaimahavidyalaya.edu.lk';
                 return;
             }
 
